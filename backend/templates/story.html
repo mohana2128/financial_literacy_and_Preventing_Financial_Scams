@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Literacy Story</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='story_style.css') }}">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay loop muted id="background-video">
+        <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <h1>📖 Real-Life Financial Literacy Story</h1>
+        <p id="story-text"></p>
+        <button onclick="speakStory()">🔊 Listen</button>
+        <a href="{{ url_for('game2') }}"><button class="game-button">🎮 Start Game</button></a>
+    </div>
+
+    <script src="{{ url_for('static', filename='story_script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='game_styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Budgeting Results</h1>
+        <canvas id="budgetChart"></canvas>
+        <p id="finalScore"></p>
+        <p id="feedback"></p>
+        <button onclick="window.location.href='/game2'">Play Again</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let finalScore = localStorage.getItem("finalScore");
+            let feedback = localStorage.getItem("feedback");
+            
+            document.getElementById("finalScore").innerText = "Your Score: " + finalScore;
+            document.getElementById("feedback").innerText = feedback;
+        });
+    </script>
+</body>
+</html>

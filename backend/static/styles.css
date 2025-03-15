@@ -1,0 +1,138 @@
+ /* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Glowing Container */
+.container {
+    width: 50%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+/* Stylish Textarea */
+textarea {
+    width: 100%;
+    height: 120px;
+    margin-top: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: border-color 0.3s ease-in-out;
+}
+
+textarea:focus {
+    border-color: #ffcc00;
+    outline: none;
+}
+
+/* Animated Button */
+button {
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 81, 47, 0.4);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #dd2476, #ff512f);
+    box-shadow: 0px 6px 20px rgba(255, 81, 47, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Animated Result Box */
+#result {
+    font-size: 22px;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    display: inline-block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Floating Particles Animation */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.container::before, .container::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.container::before {
+    top: -40px;
+    left: -40px;
+}
+
+.container::after {
+    bottom: -40px;
+    right: -40px;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0px); }
+}
+/* Style buttons with hover effects */
+.btn {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #0056b3, #003580);
+}
+
+/* Heatmap button styling */
+.heatmap-btn {
+    background: linear-gradient(45deg, #ff5733, #c70039);
+}
+
+.heatmap-btn:hover {
+    background: linear-gradient(45deg, #c70039, #900c3f);
+}

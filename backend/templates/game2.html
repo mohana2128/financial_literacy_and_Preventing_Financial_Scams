@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetMaster - Plan Your Money</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='game2.css') }}">
+</head>
+<body>
+    <div class="container">
+        <canvas id="budgetChart"></canvas>
+        <h1>💰 Budget Your ₹10,000 Wisely! 💰</h1>
+        <p>Distribute your money across these categories:</p>
+
+        <form id="budget-form">
+            <div class="input-group">
+                <label>🏠 Essentials (Rent, Food, Transport)</label>
+                <input type="number" id="essentials" min="0" max="10000" required>
+            </div>
+
+            <div class="input-group">
+                <label>🎮 Wants (Shopping, Entertainment, Dining Out)</label>
+                <input type="number" id="wants" min="0" max="10000" required>
+            </div>
+
+            <div class="input-group">
+                <label>💰 Savings (Emergency Fund, FD, Investments)</label>
+                <input type="number" id="savings" min="0" max="10000" required>
+            </div>
+
+            <div class="input-group">
+                <label>🏦 Debt Repayment (Loans, Credit Cards)</label>
+                <input type="number" id="debt" min="0" max="10000" required>
+            </div>
+
+            <button type="submit">Submit Budget</button><br><br><br>
+
+            <button type="button" class="btn game-btn" onclick="window.location.href='/results'">Result</button>
+
+
+ 
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='game2.js') }}"></script>
+</body>
+</html>

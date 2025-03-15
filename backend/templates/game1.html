@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BudgetMaster Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='game_styles.css') }}">
+</head>
+<body>
+    <div class="game-container">
+        <h2>💰 Budget Your ₹10,000 Wisely! 💰</h2>
+        <p id="balance">Balance: ₹10,000</p>
+        <div id="question-container"></div>
+        <button id="next-btn" onclick="nextQuestion()">Next</button>
+        <div id="feedback"></div>
+    </div>
+
+    <script src="{{ url_for('questions_js') }}"></script>
+</body>
+</html>

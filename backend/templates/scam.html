@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scam Reporting Guide</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='scam.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Scam Reporting Guide</h1>
+        
+        <div class="steps">
+            <div class="card">
+                <div class="front">Step 1</div>
+                <div class="back">Identify the Scam & Gather Proof</div>
+            </div>
+            <div class="card">
+                <div class="front">Step 2</div>
+                <div class="back">Visit Official Government Scam Reporting Website</div>
+            </div>
+            <div class="card">
+                <div class="front">Step 3</div>
+                <div class="back">Submit a Detailed Report with Evidence</div>
+            </div>
+            <div class="card">
+                <div class="front">Step 4</div>
+                <div class="back">Monitor Your Case and Follow Up</div>
+            </div>
+        </div>
+
+        <button class="report-btn">Report a Scam Now</button>
+        <div class="scan-agency">
+            <h2>📞 Scan Agency Helpline</h2>
+            <p>If you suspect a scam, call our helpline immediately:</p>
+            <p class="scan-number">+91 1800-123-4567</p>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='scam.js') }}"></script>
+</body>
+</html>

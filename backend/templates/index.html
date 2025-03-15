@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scam Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Scam Education</h1>
+        <p>Choose a module and educate your financial literacy.</p>
+        
+        <div class="button-container">
+            <a href="/predict"><button class="btn">Check a Message</button></a>
+            <a href="{{ url_for('map_view') }}"><button class="btn heatmap-btn">Show Scam Heatmap</button></a>
+            <a href="{{ url_for('story') }}"><button class="btn game-btn">real-life story</button></a>
+            <a href="{{ url_for('game1') }}"><button class="btn game-btn">game</button></a>
+            <a href="{{ url_for('voice') }}"><button class="btn game-btn">voice-detection</button></a>
+            <a href="{{ url_for('scam') }}"><button class="btn game-btn">scam-guide</button></a>
+            
+
+        </div>
+    </div>
+</body>
+</html>

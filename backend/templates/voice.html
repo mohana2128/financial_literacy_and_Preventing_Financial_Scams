@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Scam Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='voice.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎙️ Voice Scam Detector</h1>
+        <p>Click the button and start speaking. The system will detect potential scams.</p>
+
+        <div class="circle" id="micAnimation"></div>
+
+        <button id="startButton">🎤 Start Listening</button>
+        <div class="output">
+            <h2>Detected Text:</h2>
+            <p id="result">Waiting for input...</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='voice.js') }}"></script>
+</body>
+</html>
